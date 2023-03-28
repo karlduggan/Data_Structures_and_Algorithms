@@ -1,7 +1,9 @@
-#Alogrithms
+# Alogrithms
 
-###Sorting Algorithms - (Numerical or alphabetical order)
-####Bubble Sort
+### Sorting Algorithms - (Numerical or alphabetical order)
+
+#### Bubble Sort
+
 ```
 def bubble_sort(arr):
     def swap(i, j):
@@ -18,7 +20,9 @@ def bubble_sort(arr):
                 swapped = True
     return arr
 ```
-####Insertion Sort
+
+#### Insertion Sort
+
 ```
 def insertion_sort(arr):
     for i in range(len(arr)):
@@ -32,7 +36,9 @@ def insertion_sort(arr):
         arr[pos] = cursor
     return arr
 ```
-####Merge Sort
+
+#### Merge Sort
+
 ```
 def merge_sort(arr):
     # The last array split
@@ -50,7 +56,7 @@ def merge(left, right, merged):
 
     left_cursor, right_cursor = 0, 0
     while left_cursor < len(left) and right_cursor < len(right):
-      
+
         # Sort each one and place into the result
         if left[left_cursor] <= right[right_cursor]:
             merged[left_cursor+right_cursor]=left[left_cursor]
@@ -58,16 +64,18 @@ def merge(left, right, merged):
         else:
             merged[left_cursor + right_cursor] = right[right_cursor]
             right_cursor += 1
-            
+
     for left_cursor in range(left_cursor, len(left)):
         merged[left_cursor + right_cursor] = left[left_cursor]
-        
+
     for right_cursor in range(right_cursor, len(right)):
         merged[left_cursor + right_cursor] = right[right_cursor]
 
     return merged
 ```
-####Quicksort
+
+#### Quicksort
+
 ```
 def quick_sort(sequence):
     length = len(sequence)
@@ -89,12 +97,17 @@ def quick_sort(sequence):
     return quick_sort(items_lower) + [pivot] + quick_sort(items_greater)
 
 ```
+
 Heapsort
-###Searching Algorithms 
+
+### Searching Algorithms
+
 Linear Search
 Binary Search
 Hash Tables
-Graph Algorithms
+
+### Graph Algorithms
+
 Depth-first Search
 Breadth-first Search
 Dijkstra’s Algorithm
