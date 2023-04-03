@@ -113,7 +113,18 @@ Breadth-first Search
 Dijkstra’s Algorithm
 Bellman-Ford Algorithm
 
+### Encryption Algorithms
+AES
+RSA
+Diffe-Hellman
+
+
 ### Compression Algorithms
+
+Gzip
+LZ 77
+Lempel-Ziv-Welch (LZW)
+Huffman coding
 
 Run-Length Encoding (RLE)
 ```
@@ -136,7 +147,7 @@ def rle_decompress(compressed):
     for char, count in compressed:
         data += char * count
     return data
-    
+
 data = "AAABBBCCCDDDEEE"
 compressed = rle_compress(data)
 print(compressed)  # [('A', 3), ('B', 3), ('C', 3), ('D', 3), ('E', 3)]
