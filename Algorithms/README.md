@@ -112,3 +112,35 @@ Depth-first Search
 Breadth-first Search
 Dijkstra’s Algorithm
 Bellman-Ford Algorithm
+
+### Compression Algorithms
+
+Run-Length Encoding (RLE)
+```
+def rle_compress(data):
+    compressed = []
+    count = 1
+    prev_char = data[0]
+    for char in data[1:]:
+        if char == prev_char:
+            count += 1
+        else:
+            compressed.append((prev_char, count))
+            prev_char = char
+            count = 1
+    compressed.append((prev_char, count))
+    return compressed
+
+def rle_decompress(compressed):
+    data = ""
+    for char, count in compressed:
+        data += char * count
+    return data
+    
+data = "AAABBBCCCDDDEEE"
+compressed = rle_compress(data)
+print(compressed)  # [('A', 3), ('B', 3), ('C', 3), ('D', 3), ('E', 3)]
+decompressed = rle_decompress(compressed)
+print(decompressed)  # AAABBBCCCDDDEEE
+
+```
