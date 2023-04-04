@@ -166,6 +166,8 @@ Diffe-Hellman
 
 
 ### Compression Algorithms
+Repetition makes compression possible
+
 
 Gzip
 LZ 77
