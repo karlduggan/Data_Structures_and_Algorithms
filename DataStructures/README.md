@@ -70,3 +70,9 @@ tree.insert(20)
 tree.preorder_traversal()
 print(tree.find(20))
 ```
+
+#### Graph Theroy
+
+Node
+Edges
+Verteices
